@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Balanze · Política de privacidad</title>
+<meta name="description" content="Política de privacidad de Balanze: tus datos se quedan en tu dispositivo.">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --text: #1b1a19;
+    --muted: #5d5a56;
+    --divider: #dedad5;
+    --accent: #e8452c;
+    --surface: #f1eee9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1b1a19;
+      --text: #f1eee9;
+      --muted: #a8a39d;
+      --divider: #3a3734;
+      --accent: #ff6a50;
+      --surface: #252321;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 48px 16px 80px; }
+  header { border-bottom: 2px solid var(--divider); padding-bottom: 24px; margin-bottom: 32px; }
+  .brand { font-weight: 800; letter-spacing: 0.08em; font-size: 14px; }
+  .brand span { color: var(--accent); }
+  h1 { font-size: 34px; line-height: 1.1; margin: 16px 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 20px; margin: 40px 0 8px; }
+  .meta { color: var(--muted); font-size: 14px; margin: 0; }
+  .lang { float: right; font-size: 14px; }
+  a { color: var(--accent); }
+  .summary { background: var(--surface); border-left: 3px solid var(--accent); padding: 16px 20px; margin: 0 0 8px; }
+  .summary p { margin: 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 8px; border-bottom: 1px solid var(--divider); }
+  th { font-weight: 600; color: var(--muted); }
+  .table-wrap { overflow-x: auto; }
+  hr { border: 0; border-top: 2px solid var(--divider); margin: 72px 0 0; }
+  ul { padding-left: 20px; }
+  li + li { margin-top: 4px; }
+</style>
+</head>
+<body>
+<main>
+
+<article id="es" lang="es">
+  <header>
+    <a class="lang" href="#en" hreflang="en">English</a>
+    <div class="brand">BALAN<span>Z</span>E</div>
+    <h1>Política de privacidad</h1>
+    <p class="meta">En vigor desde el 11 de octubre de 2026</p>
+  </header>
+
+  <div class="summary">
+    <p><strong>En resumen:</strong> Balanze no recoge ningún dato tuyo. No hay servidores ni cuentas en
+    línea, y la app no lleva analítica, publicidad ni rastreo. Todo lo que guardas en Balanze se queda en tu
+    dispositivo. Las pocas conexiones a internet que hace sirven para consultar datos públicos
+    (tipos de cambio y cotizaciones) y nunca incluyen tus movimientos, saldos ni datos bancarios.</p>
+  </div>
+
+  <h2>Quién es el responsable</h2>
+  <p>Balanze es una aplicación desarrollada por angmarmos, desarrollador independiente. Para cualquier
+  pregunta sobre esta política puedes escribir a <a href="mailto:angmarmos09@gmail.com">angmarmos09@gmail.com</a>.</p>
+
+  <h2>Qué datos guarda Balanze y dónde</h2>
+  <p>Todo lo que introduces o importas se guarda únicamente en tu dispositivo, en la carpeta de datos de la
+  aplicación:</p>
+  <ul>
+    <li>Perfiles: nombre, foto opcional y preferencias. La contraseña se guarda como hash bcrypt, nunca en claro.</li>
+    <li>Cuentas y movimientos que importas de tus extractos o añades a mano, con sus categorías, notas,
+    etiquetas y adjuntos. De las tarjetas solo se guardan los cuatro últimos dígitos.</li>
+    <li>Inmuebles y sus documentos, inversiones, y las wallets y direcciones públicas de criptomonedas que añadas.</li>
+  </ul>
+  <p>El desarrollador no tiene acceso a ninguno de estos datos: nunca salen de tu dispositivo salvo que
+  tú los copies o exportes.</p>
+  <p>La base de datos no está cifrada. La contraseña de cada perfil separa los perfiles dentro de la app,
+  pero no protege los archivos de alguien con acceso a tu cuenta de usuario del sistema. Protege tu
+  dispositivo como protegerías cualquier documento financiero.</p>
+
+  <h2>Conexiones a internet</h2>
+  <p>Balanze solo se conecta a internet para consultar información pública. Las secciones de criptomonedas
+  e inversiones solo se conectan después de que las actives en tu perfil.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Servicio</th><th>Cuándo</th><th>Qué se envía</th></tr></thead>
+    <tbody>
+      <tr><td>Banco Central Europeo (data-api.ecb.europa.eu)</td><td>Al actualizar los tipos de cambio</td>
+          <td>Los códigos de las divisas que usas y el periodo de fechas</td></tr>
+      <tr><td>Nodos y APIs públicas de cada blockchain (por ejemplo publicnode.com, blockstream.info,
+          polkadot.io, solana.com, el Mirror Node de Hedera, drpc.org) y los nodos que configures tú</td>
+          <td>Si activas la sección de criptomonedas, al sincronizar</td>
+          <td>Las direcciones públicas que has añadido. Si añades una clave pública extendida (xpub),
+          las direcciones se derivan en tu dispositivo y solo se consultan esas direcciones, no la clave</td></tr>
+      <tr><td>Kraken y Coinbase (APIs públicas de precios)</td>
+          <td>Si activas la sección de criptomonedas, al sincronizar precios</td>
+          <td>Los símbolos de los activos y tu divisa base</td></tr>
+      <tr><td>Yahoo Finance</td><td>Si activas las cotizaciones en la sección de inversiones</td>
+          <td>Lo que escribes al buscar un activo (nombre, ticker o ISIN) y los símbolos de tus activos</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Nunca se envían tus saldos, movimientos, IBAN, nombres ni extractos. Las peticiones no llevan
+  identificadores tuyos, pero, como en cualquier conexión a internet, estos servicios ven tu dirección IP y
+  la tratan según sus propias políticas de privacidad.</p>
+  <p>Algunos enlaces (por ejemplo, ver una dirección en un explorador de bloques) se abren en tu navegador.
+  Esa web queda sujeta a su propia política.</p>
+
+  <h2>Recibir extractos desde el móvil</h2>
+  <p>Si usas esta opción, Balanze abre un pequeño servidor temporal en tu red local, protegido con un
+  código de un solo uso que aparece en el QR. Los archivos van directamente del móvil a la app por tu red
+  local, sin pasar por internet ni por ningún servidor externo, y el servidor se cierra solo tras un rato
+  sin uso.</p>
+
+  <h2>Copias de seguridad</h2>
+  <p>Las copias que exportas (archivos <code>.balanze</code>) contienen los datos de todos los perfiles del
+  dispositivo y no están cifradas. Se guardan donde tú elijas y eres tú quien decide dónde y con quién
+  compartirlas.</p>
+
+  <h2>Registro técnico</h2>
+  <p>Balanze guarda en tu dispositivo un pequeño archivo de registro (<code>balanze.log</code>, de 1 MB como
+  máximo) con errores técnicos para poder diagnosticar fallos. Puede incluir, por ejemplo, la dirección de una
+  consulta que ha fallado. Este archivo nunca se envía; solo lo verías tú, o quien tú se lo pases.</p>
+
+  <h2>Tiendas de aplicaciones</h2>
+  <p>Si instalas Balanze desde Microsoft Store (o, en el futuro, App Store o Google Play), la tienda puede
+  recoger datos sobre la descarga, la instalación y los fallos según su propia política de privacidad. El
+  desarrollador solo recibe de ellas estadísticas agregadas y anónimas, como el número de instalaciones.</p>
+
+  <h2>Tus derechos</h2>
+  <p>Como el desarrollador no recoge ni trata tus datos personales, los controlas directamente en tu
+  dispositivo: puedes consultarlos y modificarlos en la app, exportarlos con una copia de seguridad y
+  borrarlos eliminando tu perfil o desinstalando la aplicación. Ten en cuenta que al desinstalar la versión de
+  Microsoft Store se borran sus datos, así que exporta una copia antes si quieres conservarlos. Si tienes
+  cualquier duda, escribe al correo de contacto indicado arriba.</p>
+
+  <h2>Menores</h2>
+  <p>Balanze no está dirigida a menores de 14 años y no recoge datos de ninguna persona.</p>
+
+  <h2>Cambios en esta política</h2>
+  <p>Si Balanze empieza a tratar datos de otra forma, esta página se actualizará antes de publicar esa
+  versión y cambiará la fecha de entrada en vigor.</p>
+</article>
+
+<hr>
+
+<article id="en" lang="en">
+  <header>
+    <a class="lang" href="#es" hreflang="es">Español</a>
+    <div class="brand">BALAN<span>Z</span>E</div>
+    <h1>Privacy policy</h1>
+    <p class="meta">Effective from 11 October 2026</p>
+  </header>
+
+  <div class="summary">
+    <p><strong>In short:</strong> Balanze collects no data about you. There are no servers or online accounts,
+    and the app has no analytics, advertising or tracking. Everything you keep in Balanze stays on your device.
+    The few internet connections it makes fetch public data (exchange rates and prices) and never include
+    your transactions, balances or bank details.</p>
+  </div>
+
+  <h2>Who is responsible</h2>
+  <p>Balanze is developed by angmarmos, an independent developer. For any question about this policy, write to
+  <a href="mailto:angmarmos09@gmail.com">angmarmos09@gmail.com</a>.</p>
+
+  <h2>What Balanze stores, and where</h2>
+  <p>Everything you enter or import is stored only on your device, in the app's data folder:</p>
+  <ul>
+    <li>Profiles: name, optional photo and preferences. The password is stored as a bcrypt hash, never in plain text.</li>
+    <li>Accounts and the transactions you import from statements or add by hand, with their categories, notes,
+    tags and attachments. For cards, only the last four digits are kept.</li>
+    <li>Properties and their documents, investments, and the cryptocurrency wallets and public addresses you add.</li>
+  </ul>
+  <p>The developer has no access to any of this data: it never leaves your device unless you copy or export it.</p>
+  <p>The database is not encrypted. Each profile's password keeps profiles apart inside the app, but it doesn't
+  protect the files from someone with access to your operating-system account. Protect your device as you would
+  any financial document.</p>
+
+  <h2>Internet connections</h2>
+  <p>Balanze only connects to the internet to look up public information. The cryptocurrency and investment
+  sections only connect after you turn them on in your profile.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Service</th><th>When</th><th>What is sent</th></tr></thead>
+    <tbody>
+      <tr><td>European Central Bank (data-api.ecb.europa.eu)</td><td>When exchange rates are updated</td>
+          <td>The codes of the currencies you use and the date range</td></tr>
+      <tr><td>Public nodes and APIs of each blockchain (for example publicnode.com, blockstream.info,
+          polkadot.io, solana.com, Hedera's Mirror Node, drpc.org) and any node you configure</td>
+          <td>If you turn on the cryptocurrency section, when syncing</td>
+          <td>The public addresses you added. If you add an extended public key (xpub), its addresses are
+          derived on your device and only those addresses are looked up, not the key</td></tr>
+      <tr><td>Kraken and Coinbase (public price APIs)</td>
+          <td>If you turn on the cryptocurrency section, when syncing prices</td>
+          <td>The assets' symbols and your base currency</td></tr>
+      <tr><td>Yahoo Finance</td><td>If you turn on prices in the investments section</td>
+          <td>What you type when searching for an asset (name, ticker or ISIN) and your assets' symbols</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Your balances, transactions, IBANs, names and statements are never sent. Requests carry no identifier of
+  yours, but, as with any internet connection, these services see your IP address and handle it under their own
+  privacy policies.</p>
+  <p>Some links (for example, viewing an address in a block explorer) open in your browser. That website is
+  subject to its own policy.</p>
+
+  <h2>Receiving statements from your phone</h2>
+  <p>If you use this option, Balanze opens a small temporary server on your local network, protected by a
+  one-time code carried in the QR code. Files go straight from your phone to the app over your local network,
+  without passing through the internet or any external server, and the server closes by itself after a while
+  without use.</p>
+
+  <h2>Backups</h2>
+  <p>The backups you export (<code>.balanze</code> files) hold the data of every profile on the device and are
+  not encrypted. They are saved wherever you choose, and you decide where to keep them and who to share them with.</p>
+
+  <h2>Technical log</h2>
+  <p>Balanze keeps a small log file on your device (<code>balanze.log</code>, 1 MB at most) with technical errors,
+  to help diagnose problems. It may include, for example, the address of a lookup that failed. This file is never
+  sent; only you, or whoever you give it to, would see it.</p>
+
+  <h2>App stores</h2>
+  <p>If you install Balanze from Microsoft Store (or, in the future, the App Store or Google Play), the store may
+  collect data about the download, installation and crashes under its own privacy policy. The developer only
+  receives aggregated, anonymous statistics from them, such as the number of installs.</p>
+
+  <h2>Your rights</h2>
+  <p>Since the developer doesn't collect or process your personal data, you control it directly on your device:
+  you can view and change it in the app, export it with a backup, and erase it by deleting your profile or
+  uninstalling the app. Note that uninstalling the Microsoft Store version deletes its data, so export a backup
+  first if you want to keep it. For any question, write to the contact email above.</p>
+
+  <h2>Children</h2>
+  <p>Balanze is not aimed at children under 14 and collects no data from anyone.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If Balanze starts handling data differently, this page will be updated before that version is released and
+  its effective date will change.</p>
+</article>
+
+</main>
+</body>
+</html>
